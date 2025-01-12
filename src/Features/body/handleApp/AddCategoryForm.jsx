@@ -24,7 +24,7 @@ function AddCategoryForm({ setOptions, options }) {
           Add Category Form
         </h2>
         <form onSubmit={handleSubmit}>
-          <div className="gap-y-4 flex flex-col">
+          <div className="gap-y-4 flex flex-col w-full">
             <input
               className="textField__input"
               type="text"

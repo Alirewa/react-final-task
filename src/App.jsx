@@ -7,8 +7,6 @@ import React, { useState } from "react";
 function App() {
   const [products, setProducts] = useState([]);
   const [options, setOptions] = useState([]);
-  console.log(products);
-  console.log(options);
 
   return (
     <DarkModeProvider>
