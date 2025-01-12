@@ -1,11 +1,35 @@
-import AddProductLayout from "./features/AddProductLayout";
-import ProductList from "./features/ProductList";
+import { useState } from "react";
+import AddCategoryForm from "./handleApp/AddCategoryForm";
+import AddProductLayout from "./handleApp/AddProductLayout";
+import ProductList from "./handleApp/ProductList";
 
-function AppLayout() {
+function AppLayout({ setProducts, products, options, setOptions }) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex gap-x-8 container w-full justify-between items-start text-secondary-400">
-      <AddProductLayout />
-      <ProductList />
+      <div className="w-1/2 flex flex-col gap-y-4">
+        <div className="bg-secondary-700 p-4 rounded-md">
+          <p
+            className="text-secondary-400 rounded-md font-bold text-lg"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Add New Category?
+          </p>
+          {isOpen ? (
+            <AddCategoryForm options={options} setOptions={setOptions} />
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="flex items-start justify-start">
+          <AddProductLayout
+            setProducts={setProducts}
+            products={products}
+            options={options}
+          />
+        </div>
+      </div>
+      <ProductList products={products} />
     </div>
   );
 }
