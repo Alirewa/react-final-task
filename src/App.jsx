@@ -13,7 +13,7 @@ function App() {
   return (
     <DarkModeProvider>
       <div className="h-screen w-full">
-        <div className="flex flex-col h-full justify-between items-center bg-secondary-800 rounded-md">
+        <div className="flex flex-col h-screen justify-between items-center bg-secondary-800 rounded-md">
           <Header products={products} setProducts={setProducts} />
           <AppLayout
             setProducts={setProducts}

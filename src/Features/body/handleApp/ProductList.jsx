@@ -2,7 +2,7 @@ import { HiPencil, HiTrash } from "react-icons/hi";
 
 export default function ProductList({ products }) {
   return (
-    <div className="w-1/2 flex flex-col gap-y-4  overflow-y-auto">
+    <div className="w-1/2 h-screen flex flex-col gap-y-2  overflow-y-visible">
       <h2 className="font-bold text-secondary-300 text-lg">Product List</h2>
       {products.map((item) => {
         return (
