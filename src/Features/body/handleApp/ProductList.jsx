@@ -6,10 +6,13 @@ export default function ProductList({ products }) {
       <h2 className="font-bold text-secondary-300 text-lg">Product List</h2>
       {products.map((item) => {
         return (
-          <div className="bg-secondary-700 rounded-md px-4 py-2 flex justify-between items-center">
+          <div
+            key={item.id}
+            className="bg-secondary-700 rounded-md px-4 py-2 flex justify-between items-center"
+          >
             <div>
               <h1 className="text-secondary-300 font-bold text-sm">
-                {item.name}
+                {item.id} - {item.name}
               </h1>
               <p className="text-secondary-400 text-xs">{item.category}</p>
             </div>

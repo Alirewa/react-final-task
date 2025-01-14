@@ -6,6 +6,7 @@ function AddCategoryForm({ setOptions, options }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!productCategoryName) return null;
     const newCategory = {
       value: options.length + 1,
       label: productCategoryName,
